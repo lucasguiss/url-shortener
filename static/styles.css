@@ -1,0 +1,13 @@
+.not-found__middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.not-found__text {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
