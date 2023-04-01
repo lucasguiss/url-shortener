@@ -26,7 +26,7 @@
             body: JSON.stringify(body)
         }).then((res) => res.json())
             .then((data) => {
-                document.getElementById('output').innerHTML = `Your shortened URL is: http://localhost:8000/shortened/${data.id}`
+                document.getElementById('output').innerHTML = `Your shortened URL is: http://localhost:8000/shortener/${data.id}`
             })
     }
 </script>
