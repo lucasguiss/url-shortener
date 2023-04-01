@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Shorten your URL!</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <input type="text" id="name" name="name" required placeholder="Insert your URL here">
+    <button onclick="createShortened()">Shorten</button>
+    <p id="output"></p>
+</body>
+
+</html>
+<script>
+    function createShortened() {
+        const body = {
+            redirect_url: document.getElementById("name").value
+        }
+        fetch('http://localhost:8000/shortener', {
+            method: 'POST',
+            headers: {
+                Accept: 'application.json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        }).then((res) => res.json())
+            .then((data) => {
+                document.getElementById('output').innerHTML = `Your shortened URL is: http://localhost:8000/shortened/${data.id}`
+            })
+    }
+</script>
