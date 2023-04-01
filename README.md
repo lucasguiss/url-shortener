@@ -3,7 +3,6 @@ This project is made to test some FastAPI features, python projects structure an
 
 ## Upcoming implementations
 - [ ] Caching with Redis
-- [ ] Load balancer
 - [ ] Rate Limiting
 - [ ] Improve CSS
 - [ ] Observability & metrics
