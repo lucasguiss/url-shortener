@@ -17,7 +17,7 @@
         const body = {
             redirect_url: document.getElementById("name").value
         }
-        fetch('http://localhost:8000/shortener', {
+        fetch('http://localhost:8000', {
             method: 'POST',
             headers: {
                 Accept: 'application.json',
@@ -26,7 +26,7 @@
             body: JSON.stringify(body)
         }).then((res) => res.json())
             .then((data) => {
-                document.getElementById('output').innerHTML = `Your shortened URL is: http://localhost:8000/shortener/${data.id}`
+                document.getElementById('output').innerHTML = `Your shortened URL is: http://localhost:8000/${data.id}`
             })
     }
 </script>
