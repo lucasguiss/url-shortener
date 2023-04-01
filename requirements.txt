@@ -3,3 +3,4 @@ uvicorn==0.21.1
 SQLAlchemy==2.0.8
 psycopg2-binary==2.9.5
 Jinja2==3.1.2
+slowapi==0.1.7
